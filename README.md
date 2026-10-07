@@ -53,6 +53,4 @@ Through this project, I practiced:
 
 
 
-BCA Graduate | Frontend Developer & Python Learner
 
-GitHub: [Preethi1909](https://github.com/Preethi1909)
