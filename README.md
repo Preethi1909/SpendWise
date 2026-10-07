@@ -1,4 +1,7 @@
 # 💰 SpendWise – Expense Tracker
+## 🌐 Live Demo
+
+[View SpendWise Live](https://spendwise-atpa.onrender.com/dashboard)
 
 SpendWise is a web-based expense tracker built with **Python and FastAPI**.  
 It allows users to add, view, edit, delete, and filter expenses through a simple dashboard.
