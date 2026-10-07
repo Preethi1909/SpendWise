@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpendWise | Expense Tracker</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', path='css/style.css') }}">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <header class="header">
+        <div>
+            <h1>SpendWise</h1>
+            <p>Track your money. Understand your spending.</p>
+        </div>
+    </header>
+
+
+    <!-- Summary Cards -->
+    <section class="summary">
+
+        <div class="summary-card purple">
+            <div class="card-icon">₹</div>
+            <div>
+                <p>Total Spending</p>
+                <h2 id="totalAmount">₹0</h2>
+            </div>
+        </div>
+
+        <div class="summary-card pink">
+            <div class="card-icon">#</div>
+            <div>
+                <p>Total Expenses</p>
+                <h2 id="totalExpenses">0</h2>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Add Expense -->
+    <section class="form-section">
+
+        <h2 id="formTitle">Add New Expense</h2>
+
+        <div class="form-grid">
+
+            <input type="number"
+                   id="amount"
+                   placeholder="Amount (₹)"
+                   min="1">
+
+            <input type="text"
+                   id="category"
+                   placeholder="Category">
+
+            <input type="date"
+                   id="date">
+
+            <input type="text"
+                   id="description"
+                   placeholder="Description">
+
+        </div>
+
+        <button id="addBtn" class="primary-btn">
+            Add Expense
+        </button>
+
+    </section>
+
+
+    <!-- Charts -->
+    <section class="charts">
+
+        <div class="chart-card">
+            <h2>Spending by Category</h2>
+            <canvas id="categoryChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h2>Monthly Spending</h2>
+            <canvas id="monthlyChart"></canvas>
+        </div>
+
+    </section>
+
+
+    <!-- Expenses -->
+    <section class="expenses-section">
+
+        <div class="section-title">
+            <h2>Recent Expenses</h2>
+        </div>
+
+        <div id="expenses"></div>
+
+    </section>
+
+</div>
+
+<script src="{{ url_for('static', path='js/script.js') }}"></script>
+
+</body>
+</html>
